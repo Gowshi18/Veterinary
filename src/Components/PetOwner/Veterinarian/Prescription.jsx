@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import VetSidebar from "./VetSidebar";
+import VetLayout from "./VetLayout";
 
 const Prescription = () => {
   const [prescriptions, setPrescriptions] = useState([
@@ -42,7 +42,7 @@ const Prescription = () => {
 
   return (
     <div className="container-fluid p-0 d-flex">
-              <VetSidebar />
+              <VetLayout />
     <div className="container my-5">
       <h2 className="mb-1 fw-bold">Prescriptions</h2>
       <p className="mb-4 text-muted">Create and manage pet prescriptions</p>

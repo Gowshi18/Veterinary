@@ -4,7 +4,13 @@ import { BsCalendar, BsClipboard } from "react-icons/bs";
 import "bootstrap/dist/css/bootstrap.min.css";
 import RecordsModal from "./RecordsModal";
 import ScheduleModal from "./ScheduleModal";
-import VetSidebar from "./VetSidebar";
+import Charlie from '../../../assets/Charlie.jpg';
+import Coco from '../../../assets/Coco.jpg';
+import Luna from '../../../assets/Luna.jpg';
+import Max from '../../../assets/Max.jpg';
+import Rocky from '../../../assets/Rocky.jpg';
+import Bella from '../../../assets/Bella.jpg'; 
+import VetLayout from "./VetLayout";
 
 const patientsData = [
   {
@@ -16,7 +22,7 @@ const patientsData = [
     status: "Healthy",
     lastVisit: "Apr 15, 2025",
     nextAppt: "Jul 15, 2025",
-    image: "https://via.placeholder.com/50",
+    image: Max,
   },
   {
     name: "Bella",
@@ -27,7 +33,7 @@ const patientsData = [
     status: "Treatment",
     lastVisit: "Apr 20, 2025",
     nextAppt: "May 5, 2025",
-    image: "https://via.placeholder.com/50",
+    image: Bella,
   },
   {
     name: "Charlie",
@@ -38,7 +44,7 @@ const patientsData = [
     status: "Follow-up",
     lastVisit: "Apr 22, 2025",
     nextAppt: "May 6, 2025",
-    image: "https://via.placeholder.com/50",
+    image: Charlie,
   },
   {
     name: "Luna",
@@ -49,7 +55,7 @@ const patientsData = [
     status: "Healthy",
     lastVisit: "Apr 10, 2025",
     nextAppt: "Oct 10, 2025",
-    image: "https://via.placeholder.com/50",
+    image: Luna,
   },
   {
     name: "Rocky",
@@ -60,7 +66,7 @@ const patientsData = [
     status: "Treatment",
     lastVisit: "Apr 18, 2025",
     nextAppt: "May 2, 2025",
-    image: "https://via.placeholder.com/50",
+    image: Rocky,
   },
   {
     name: "Coco",
@@ -69,26 +75,9 @@ const patientsData = [
     owner: "Jessica Lee",
     phone: "(555) 678-9012",
     status: "Healthy",
-    image: "https://via.placeholder.com/50",
+    image: Coco,
   },
-  {
-    name: "Buddy",
-    species: "Dog, Labrador Retriever",
-    age: "7 years",
-    owner: "Robert Brown",
-    phone: "(555) 789-0123",
-    status: "Healthy",
-    image: "https://via.placeholder.com/50",
-  },
-  {
-    name: "Milo",
-    species: "Cat, Persian",
-    age: "2 years",
-    owner: "Linda Green",
-    phone: "(555) 890-1234",
-    status: "Treatment",
-    image: "https://via.placeholder.com/50",
-  },
+  
 ];
 
 const StatusBadge = ({ status }) => (
@@ -174,7 +163,7 @@ const Patients = () => {
 
   return (
     <div className="container-fluid p-0 d-flex">
-              <VetSidebar />
+              <VetLayout />
     <div className="container-fluid mt-4">
       <h3>Pet Patients</h3>
       <p className="text-muted">View and manage all your pet patients.</p>

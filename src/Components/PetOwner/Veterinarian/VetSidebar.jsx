@@ -10,11 +10,12 @@ import {
   FaSearch,
   FaCog
 } from 'react-icons/fa';
-//import './VetSidebar.css';
+import './VetTheme.css';
 
 const VetSidebar = () => {
   return (
-    <div className="d-flex flex-column vh-100 border-end p-3" style={{ width: '250px' }}>
+    <div className=" vh-100 border-end p-3" style={{ width: '250px',height: '100vh',position: 'fixed', 
+      overflow: 'hidden', }}>
       <h4 className="mb-4 fw-bold">VetCare</h4>
       <ul className="nav flex-column">
         <li className="nav-item mb-2">

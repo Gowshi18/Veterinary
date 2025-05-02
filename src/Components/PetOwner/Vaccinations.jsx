@@ -3,6 +3,49 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './Sidebar';
 import { useNavigate } from "react-router-dom";
 
+import Rabies from "../../assets/Rabies.jpg";
+import DHPP from "../../assets/Dhpp.jfif";
+import Leptospirosis from "../../assets/Leptospirosis.jfif";
+import Bordetella from "../../assets/Bordetella.jfif";
+import CanineInfluenza from "../../assets/CanineInfluenza.jfif";
+import Lyme from "../../assets/Lyme.jfif";
+import CoronaVirus from "../../assets/CoronaVirus.jfif";
+import ParvovirusBooster from "../../assets/ParvovirusBooster.jfif";
+import HepatitisBooster from "../../assets/HepatitisBooster.jfif";
+import PuppySeriesCombo from "../../assets/PuppySeriesCombo.jfif";
+
+import FVRCP from "../../assets/FVRCP.jfif";
+import FelineLeukemia from "../../assets/FelineLeukemia.jfif";
+import FelineImmunodeficiency from "../../assets/FelineImmunodeficiency.jfif";
+import ChlamydiaVaccine from "../../assets/ChlamydiaVaccine.jfif";
+import CalicivirusBooster from "../../assets/CalicivirusBooster.jfif";
+import PanleukopeniaBooster from "../../assets/PanleukopeniaBooster.jfif";
+import FelinePneumonitis from "../../assets/FelinePneumonitis.jfif";
+import RingwormVaccine from "../../assets/RingwormVaccine.jpg";
+import KittenCombo from "../../assets/KittenCombo.jfif";
+
+import Polyomavirus from "../../assets/Polyomavirus.jfif";
+import Psittacosis from "../../assets/Psittacosis.jfif";
+import PoxvirusVaccine from "../../assets/PoxvirusVaccine.jfif";
+import NewcastleDisease from "../../assets/NewcastleDisease.jfif";
+import AvianInfluenza from "../../assets/AvianInfluenza.jfif";
+import Aspergillosis from "../../assets/Aspergillosis.jfif";
+import Candidiasis from "../../assets/Candidiasis.jfif";
+import MycobacteriumAvium from "../../assets/MycobacteriumAvium.jfif";
+import BirdHepatitis from "../../assets/BirdHepatitis.jfif";
+import ExoticBirdBooster from "../../assets/ExoticBirdBooster.jfif";
+
+import Myxomatosis from "../../assets/Myxomatosis.jfif";
+import RHDV1 from "../../assets/(RHDV1).jfif";
+import RHDV2 from "../../assets/(RHDV2).jfif";
+import PasteurellaVaccine from "../../assets/PasteurellaVaccine.jfif";
+import EcuniculiVaccine from "../../assets/EcuniculiVaccine.jfif";
+import TularemiaVaccine from "../../assets/TularemiaVaccine.jfif";
+import Clostridiumspiroforme from "../../assets/Clostridiumspiroforme.jfif";
+import CoccidiosisVaccine from "../../assets/CoccidiosisVaccine.jfif";
+import FurMitePrevention from "../../assets/FurMitePrevention.jfif";
+import RabbitComboBooster from "../../assets/RabbitComboBooster.jfif";
+
 
 const allVaccinations = [
   // === DOGS ===
@@ -11,7 +54,7 @@ const allVaccinations = [
     description: "Protects against the deadly rabies virus.",
     frequency: "Annual",
     petType: "Dog",
-    image: "https://www.merck-animal-health-usa.com/wp-content/uploads/sites/54/2021/01/Nobivac-1-RABIES-resource-image-770x455-1.png",
+    image: Rabies,
     recommended: true,
   },
   {
@@ -19,7 +62,7 @@ const allVaccinations = [
     description: "Protects from Distemper, Hepatitis, Parainfluenza, Parvovirus.",
     frequency: "Every 3 years",
     petType: "Dog",
-    image: "https://animeal.in/cdn/shop/files/I02102_1.webp?v=1711114691&width=1920",
+    image: DHPP,
     recommended: true,
   },
   {
@@ -27,311 +70,311 @@ const allVaccinations = [
     description: "Prevents bacterial disease that can affect kidneys and liver.",
     frequency: "Annual",
     petType: "Dog",
-    image: "https://www.msd-animal-health.co.in/wp-content/uploads/sites/33/2020/02/Nobivac-Lepto.png?w=558&h=440&crop=1",
+    image: Leptospirosis,
     recommended: false,
   },
-  // {
-  //   name: "Bordetella",
-  //   description: "Protects against kennel cough.",
-  //   frequency: "Annual",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Bordetella",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Canine Influenza",
-  //   description: "Guards against dog flu strains H3N2 and H3N8.",
-  //   frequency: "Annual",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Influenza",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Lyme Disease",
-  //   description: "Prevents tick-borne Lyme disease.",
-  //   frequency: "Annual",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Lyme",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Corona Virus Vaccine",
-  //   description: "Prevents coronavirus in dogs (not COVID-19).",
-  //   frequency: "Annual",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Coronavirus",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Parvovirus Booster",
-  //   description: "Additional protection against Parvo.",
-  //   frequency: "Annual",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Parvovirus",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Hepatitis Booster",
-  //   description: "Boosts immunity against hepatitis.",
-  //   frequency: "Every 3 years",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Hepatitis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Puppy Series Combo",
-  //   description: "For puppies: core combo protection.",
-  //   frequency: "Series (6-16 weeks)",
-  //   petType: "Dog",
-  //   image: "https://via.placeholder.com/300x150?text=Puppy+Combo",
-  //   recommended: true,
-  // },
+  {
+    name: "Bordetella",
+    description: "Protects against kennel cough.",
+    frequency: "Annual",
+    petType: "Dog",
+    image: Bordetella,
+    recommended: true,
+  },
+  {
+    name: "Canine Influenza",
+    description: "Guards against dog flu strains H3N2 and H3N8.",
+    frequency: "Annual",
+    petType: "Dog",
+    image: CanineInfluenza,
+    recommended: false,
+  },
+  {
+    name: "Lyme Disease",
+    description: "Prevents tick-borne Lyme disease.",
+    frequency: "Annual",
+    petType: "Dog",
+    image: Lyme,
+    recommended: true,
+  },
+  {
+    name: "Corona Virus Vaccine",
+    description: "Prevents coronavirus in dogs (not COVID-19).",
+    frequency: "Annual",
+    petType: "Dog",
+    image: CoronaVirus,
+    recommended: false,
+  },
+  {
+    name: "Parvovirus Booster",
+    description: "Additional protection against Parvo.",
+    frequency: "Annual",
+    petType: "Dog",
+    image: ParvovirusBooster,
+    recommended: false,
+  },
+  {
+    name: "Hepatitis Booster",
+    description: "Boosts immunity against hepatitis.",
+    frequency: "Every 3 years",
+    petType: "Dog",
+    image: HepatitisBooster,
+    recommended: false,
+  },
+  {
+    name: "Puppy Series Combo",
+    description: "For puppies: core combo protection.",
+    frequency: "Series (6-16 weeks)",
+    petType: "Dog",
+    image: PuppySeriesCombo,
+    recommended: true,
+  },
 
-  // // === CATS ===
-  // {
-  //   name: "FVRCP",
-  //   description: "Protects against Rhinotracheitis, Calicivirus, Panleukopenia.",
-  //   frequency: "Every 3 years",
-  //   petType: "Cat",
-  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeadUP1kXIEAEclkvOXBBdYdzdVBRUAOJ7n8Tk6PrjP4lyeWiuhv-HjMI3DhJSGHmiL0U&usqp=CAU",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Rabies (Feline)",
-  //   description: "Protects cats from rabies virus.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeadUP1kXIEAEclkvOXBBdYdzdVBRUAOJ7n8Tk6PrjP4lyeWiuhv-HjMI3DhJSGHmiL0U&usqp=CAU",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Feline Leukemia (FeLV)",
-  //   description: "Prevents feline leukemia virus infection.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeadUP1kXIEAEclkvOXBBdYdzdVBRUAOJ7n8Tk6PrjP4lyeWiuhv-HjMI3DhJSGHmiL0U&usqp=CAU",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Feline Immunodeficiency",
-  //   description: "Protection against FIV.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=FIV",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Chlamydia Vaccine",
-  //   description: "Prevents feline chlamydia infections.",
-  //   frequency: "Every 3 years",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Chlamydia",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Calicivirus Booster",
-  //   description: "Boosts immunity against calicivirus.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Calicivirus",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Panleukopenia Booster",
-  //   description: "Reinforces defense against feline distemper.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Panleukopenia",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Feline Pneumonitis",
-  //   description: "Protects from respiratory infections.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Pneumonitis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Ringworm Vaccine",
-  //   description: "Prevents fungal ringworm in high-risk areas.",
-  //   frequency: "Annual",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Ringworm",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Kitten Combo",
-  //   description: "Core vaccinations for kittens.",
-  //   frequency: "Series (6-16 weeks)",
-  //   petType: "Cat",
-  //   image: "https://via.placeholder.com/300x150?text=Kitten+Combo",
-  //   recommended: true,
-  // },
+  // === CATS ===
+  {
+    name: "FVRCP",
+    description: "Protects against Rhinotracheitis, Calicivirus, Panleukopenia.",
+    frequency: "Every 3 years",
+    petType: "Cat",
+    image: FVRCP,
+    recommended: true,
+  },
+  {
+    name: "Rabies (Feline)",
+    description: "Protects cats from rabies virus.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: Rabies,
+    recommended: true,
+  },
+  {
+    name: "Feline Leukemia (FeLV)",
+    description: "Prevents feline leukemia virus infection.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: FelineLeukemia,
+    recommended: true,
+  },
+  {
+    name: "Feline Immunodeficiency",
+    description: "Protection against FIV.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: FelineImmunodeficiency,
+    recommended: false,
+  },
+  {
+    name: "Chlamydia Vaccine",
+    description: "Prevents feline chlamydia infections.",
+    frequency: "Every 3 years",
+    petType: "Cat",
+    image: ChlamydiaVaccine,
+    recommended: false,
+  },
+  {
+    name: "Calicivirus Booster",
+    description: "Boosts immunity against calicivirus.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: CalicivirusBooster,
+    recommended: false,
+  },
+  {
+    name: "Panleukopenia Booster",
+    description: "Reinforces defense against feline distemper.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: PanleukopeniaBooster,
+    recommended: false,
+  },
+  {
+    name: "Feline Pneumonitis",
+    description: "Protects from respiratory infections.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: FelinePneumonitis,
+    recommended: false,
+  },
+  {
+    name: "Ringworm Vaccine",
+    description: "Prevents fungal ringworm in high-risk areas.",
+    frequency: "Annual",
+    petType: "Cat",
+    image: RingwormVaccine,
+    recommended: false,
+  },
+  {
+    name: "Kitten Combo",
+    description: "Core vaccinations for kittens.",
+    frequency: "Series (6-16 weeks)",
+    petType: "Cat",
+    image: KittenCombo,
+    recommended: true,
+  },
 
-  // // === BIRDS ===
-  // {
-  //   name: "Polyomavirus",
-  //   description: "Protects against polyomavirus in young birds.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Polyomavirus",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Psittacosis",
-  //   description: "Prevents Chlamydia psittaci infection.",
-  //   frequency: "Every 2 years",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Psittacosis",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Poxvirus Vaccine",
-  //   description: "Prevents avian pox in birds.",
-  //   frequency: "Every 3 years",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Poxvirus",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Newcastle Disease",
-  //   description: "Prevents serious respiratory disease.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Newcastle",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Avian Influenza",
-  //   description: "Guards birds against flu strains.",
-  //   frequency: "Every 2 years",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Avian+Flu",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Aspergillosis",
-  //   description: "Prevents fungal respiratory issues.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Aspergillosis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Candidiasis",
-  //   description: "Protects against yeast infections.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Candidiasis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Mycobacterium Avium",
-  //   description: "Guards birds from avian tuberculosis.",
-  //   frequency: "Every 3 years",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Mycobacterium",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Bird Hepatitis",
-  //   description: "Prevents avian liver diseases.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Bird+Hepatitis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Exotic Bird Booster",
-  //   description: "Combo vaccine for exotic pet birds.",
-  //   frequency: "Annual",
-  //   petType: "Bird",
-  //   image: "https://via.placeholder.com/300x150?text=Exotic+Bird+Booster",
-  //   recommended: true,
-  // },
+  // === BIRDS ===
+  {
+    name: "Polyomavirus",
+    description: "Protects against polyomavirus in young birds.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: Polyomavirus,
+    recommended: true,
+  },
+  {
+    name: "Psittacosis",
+    description: "Prevents Chlamydia psittaci infection.",
+    frequency: "Every 2 years",
+    petType: "Bird",
+    image: Psittacosis,
+    recommended: true,
+  },
+  {
+    name: "Poxvirus Vaccine",
+    description: "Prevents avian pox in birds.",
+    frequency: "Every 3 years",
+    petType: "Bird",
+    image: PoxvirusVaccine,
+    recommended: false,
+  },
+  {
+    name: "Newcastle Disease",
+    description: "Prevents serious respiratory disease.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: NewcastleDisease,
+    recommended: false,
+  },
+  {
+    name: "Avian Influenza",
+    description: "Guards birds against flu strains.",
+    frequency: "Every 2 years",
+    petType: "Bird",
+    image: AvianInfluenza,
+    recommended: false,
+  },
+  {
+    name: "Aspergillosis",
+    description: "Prevents fungal respiratory issues.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: Aspergillosis,
+    recommended: false,
+  },
+  {
+    name: "Candidiasis",
+    description: "Protects against yeast infections.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: Candidiasis,
+    recommended: false,
+  },
+  {
+    name: "Mycobacterium Avium",
+    description: "Guards birds from avian tuberculosis.",
+    frequency: "Every 3 years",
+    petType: "Bird",
+    image: MycobacteriumAvium,
+    recommended: false,
+  },
+  {
+    name: "Bird Hepatitis",
+    description: "Prevents avian liver diseases.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: BirdHepatitis,
+    recommended: false,
+  },
+  {
+    name: "Exotic Bird Booster",
+    description: "Combo vaccine for exotic pet birds.",
+    frequency: "Annual",
+    petType: "Bird",
+    image: ExoticBirdBooster,
+    recommended: true,
+  },
 
-  // // === RABBITS ===
-  // {
-  //   name: "Myxomatosis",
-  //   description: "Protects against Myxomatosis virus.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Myxomatosis",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Rabbit Hemorrhagic Disease (RHDV1)",
-  //   description: "Guards against deadly viral disease RHDV1.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=RHDV1",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Rabbit Hemorrhagic Disease (RHDV2)",
-  //   description: "Protects from the newer strain RHDV2.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=RHDV2",
-  //   recommended: true,
-  // },
-  // {
-  //   name: "Pasteurella Vaccine",
-  //   description: "Prevents respiratory infections.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Pasteurella",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "E. cuniculi Vaccine",
-  //   description: "Prevents Encephalitozoon cuniculi infection.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=E.cuniculi",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Tularemia Vaccine",
-  //   description: "Guards against rabbit fever (Francisella tularensis).",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Tularemia",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Clostridium spiroforme",
-  //   description: "Prevents enterotoxemia in rabbits.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Clostridium",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Coccidiosis Vaccine",
-  //   description: "Prevents intestinal parasite infections.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Coccidiosis",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Fur Mite Prevention",
-  //   description: "Protects against fur mites.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Fur+Mites",
-  //   recommended: false,
-  // },
-  // {
-  //   name: "Rabbit Combo Booster",
-  //   description: "Combined Myxo & RHD vaccine.",
-  //   frequency: "Annual",
-  //   petType: "Rabbit",
-  //   image: "https://via.placeholder.com/300x150?text=Rabbit+Combo",
-  //   recommended: true,
-  // }
+  // === RABBITS ===
+  {
+    name: "Myxomatosis",
+    description: "Protects against Myxomatosis virus.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: Myxomatosis,
+    recommended: true,
+  },
+  {
+    name: "Rabbit Hemorrhagic Disease (RHDV1)",
+    description: "Guards against deadly viral disease RHDV1.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: (RHDV1),
+    recommended: true,
+  },
+  {
+    name: "Rabbit Hemorrhagic Disease (RHDV2)",
+    description: "Protects from the newer strain RHDV2.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: (RHDV2),
+    recommended: true,
+  },
+  {
+    name: "Pasteurella Vaccine",
+    description: "Prevents respiratory infections.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: PasteurellaVaccine,
+    recommended: false,
+  },
+  {
+    name: "E. cuniculi Vaccine",
+    description: "Prevents Encephalitozoon cuniculi infection.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: EcuniculiVaccine,
+    recommended: false,
+  },
+  {
+    name: "Tularemia Vaccine",
+    description: "Guards against rabbit fever (Francisella tularensis).",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: TularemiaVaccine,
+    recommended: false,
+  },
+  {
+    name: "Clostridium spiroforme",
+    description: "Prevents enterotoxemia in rabbits.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: Clostridiumspiroforme,
+    recommended: false,
+  },
+  {
+    name: "Coccidiosis Vaccine",
+    description: "Prevents intestinal parasite infections.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: CoccidiosisVaccine,
+    recommended: false,
+  },
+  {
+    name: "Fur Mite Prevention",
+    description: "Protects against fur mites.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: FurMitePrevention,
+    recommended: false,
+  },
+  {
+    name: "Rabbit Combo Booster",
+    description: "Combined Myxo & RHD vaccine.",
+    frequency: "Annual",
+    petType: "Rabbit",
+    image: RabbitComboBooster,
+    recommended: true,
+  }
 ];
 
 
@@ -388,7 +431,7 @@ const Vaccinations = () => {
   return (
     <div className="container-fluid p-0 d-flex">
           <Sidebar />
-    <div className="container mt-5">
+    <div className="container-fluid mt-5 ">
       <h2 className="text-center fw-bold">Pet Vaccination Services</h2>
       <p className="text-center text-muted">Select a pet type to view relevant vaccinations</p>
 

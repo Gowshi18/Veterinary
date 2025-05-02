@@ -124,14 +124,14 @@ const Veterinarians = () => {
   return (
     <div className="container-fluid p-0 d-flex">
       <Sidebar />
-      <div className="container mt-6">
+      <div className="container-fluid mt-6 ">
         <h2 className="mb-4 text-center">Our Veterinarians</h2>
 
         {/* Search Bar */}
         <div className="mb-4 d-flex justify-content-between align-items-center">
           <input
             type="text"
-            className="form-control w-50"
+            className="form-control w-75"
             placeholder="Search by name, specialization, clinic, or location"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

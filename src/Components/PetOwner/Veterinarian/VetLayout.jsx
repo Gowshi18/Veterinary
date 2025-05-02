@@ -1,16 +1,14 @@
-
 import { Outlet } from "react-router-dom";
 import VetSidebar from "./VetSidebar"; // your sidebar component
-import './Theme.css';
+import './vetTheme.css';
 
 const VetLayout = () => {
   return (
-    <div className="d-flex">
-      <div className="sidebar bg-light p-3" style={{ width: "250px" }}>
-        <VetSidebar />
-      </div>
-      <div className="content flex-grow-1 p-4">
-        <Outlet /> {/* This is where the content will load */}
+    <div>
+      <VetSidebar /> {/* Sidebar is fixed */}
+      
+      <div className="content p-4" style={{ marginLeft: "250px" }}>
+        <Outlet /> {/* Main content appears beside the sidebar */}
       </div>
     </div>
   );

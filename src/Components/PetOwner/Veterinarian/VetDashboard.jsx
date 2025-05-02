@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import VetLayout from './VetLayout';
 
 import VetSidebar from './VetSidebar';
-//import './Theme.css';
+import './VetTheme.css';
 const VetDashboard = () => {
   const [dashboardData, setDashboardData] = useState({
     totalAppointments: 12,
@@ -75,6 +76,7 @@ const VetDashboard = () => {
   return (
     <div className="container-fluid p-0 d-flex">
           <VetSidebar />
+          <VetLayout />
     <div className="container-fluid p-4">
       <h3>Dashboard</h3>
       <p className="text-muted">Welcome back, Dr. Smith</p>

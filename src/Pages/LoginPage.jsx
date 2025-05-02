@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './LoginPage.css';
 
 function LoginPage() {
   const [userType, setUserType] = useState('petOwner');
@@ -26,27 +27,27 @@ function LoginPage() {
 
   return (
     <div className="login-bg d-flex align-items-center justify-content-center vh-100">
-      <div className="card p-4 shadow-lg w-100" style={{ maxWidth: '400px' }}>
+      <div className="login-container p-4 shadow-lg w-100" style={{ maxWidth: '400px' }}>
         <h2 className="text-center fw-bold mb-2">Welcome Back</h2>
         <p className="text-center text-muted mb-3">Enter your credentials to access your account</p>
 
         <div className="btn-group w-100 mb-3">
           <button
-            className={`btn ${userType === 'petOwner' ? 'btn btn-success border' : 'btn-outline-light text-muted'}`}
+            className={`btn ${userType === 'petOwner' ? 'btn btn-light border' : 'btn-outline-light text-muted'}`}
             onClick={() => setUserType('petOwner')}
           >
             🐾 Pet Owner
           </button>
           <button
-            className={`btn ${userType === 'vet' ? 'btn btn-success border' : 'btn-outline-light text-muted'}`}
+            className={`btn ${userType === 'vet' ? 'btn btn-light border' : 'btn-outline-light text-muted'}`}
             onClick={() => setUserType('vet')}
           >
             👩‍⚕️ Veterinarian
           </button>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3 text-start">
+        <form onSubmit={handleSubmit} className= "w-100">
+          <div className="mb-3 text-start w-100">
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"

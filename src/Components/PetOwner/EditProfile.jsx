@@ -40,8 +40,8 @@ const Profile = () => {
       <div className="col-2 p-0">
         <Sidebar />
       </div>
-      <div className="col-10 p-4 bg-white" style={{ minHeight: "100vh" }}>
-        <div className="card mb-4">
+      <div className="col-10 p-4 bg-white d-flex justify-content-center" style={{ minHeight: "100vh" }}>
+        <div className="card mb-4 justify-content-center" style={{ width:"600px",}}>
           <div className="card-header">
             <strong>Edit Pet Owner Profile</strong>
           </div>
@@ -166,12 +166,12 @@ const Profile = () => {
                 <div className="col-md-6 text-md-end mt-3 mt-md-0">
                   <button
                     type="button"
-                    className="btn btn-secondary me-2"
+                    className="btn btn-dark me-2"
                     onClick={handleAddPet}
                   >
                     + Add Pet
                   </button>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-dark">
                     Save Changes
                   </button>
                 </div>

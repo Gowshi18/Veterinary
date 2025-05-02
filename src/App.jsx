@@ -29,6 +29,7 @@ import Prescription from './Components/PetOwner/Veterinarian/Prescription';
 import Messages from './Components/PetOwner/Messages';
 import Patients from './Components/PetOwner/Veterinarian/Patients';
 import HealthRecords from './Components/PetOwner/Veterinarian/HealthRecords';
+import Emergency from './Components/PetOwner/Emergency';
 
 
 
@@ -60,6 +61,7 @@ function App() {
       <Route path="/prescriptions" element={<Prescription />} />
       <Route path="/patients" element={<Patients />} />
       <Route path="/records" element={<HealthRecords />} />
+      <Route path="/emergency" element={<Emergency />} />
 
       
     </Routes>

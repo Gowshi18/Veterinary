@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Sidebar from './VetSidebar';
+
+import VetLayout from './VetLayout';
 
 const petOwners = [
   { id: 1, name: 'Adam Johnson' },
@@ -21,7 +22,7 @@ const VetMessages = () => {
 
   return (
     <div className="container-fluid p-0 d-flex">
-      <Sidebar />
+      <VetLayout />
       <div className="d-flex w-100" style={{ height: '100vh' }}>
         <div className="border-end bg-light p-3" style={{ width: '25%' }}>
           <h5 className="mb-3">Pet Owners</h5>

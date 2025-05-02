@@ -2,7 +2,7 @@
 
 /* Container styles */
 .container {
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -16,7 +16,7 @@
 .card h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #4CAF50;
+  color: #0d0d0e;
 }
 
 .card h4 {
@@ -54,7 +54,7 @@
 
 /* Button styles */
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #080808;
   color: #fff;
   border: none;
   padding: 12px;
@@ -64,7 +64,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #292b29;
 }
 
 /* Input fields and checkboxes margin adjustments */

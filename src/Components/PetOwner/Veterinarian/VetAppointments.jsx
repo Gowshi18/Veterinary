@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import VetSidebar from './VetSidebar';
+
+import VetLayout from './VetLayout';
 
 const VetAppointments = () => {
   const [appointments, setAppointments] = useState([]);
@@ -24,7 +25,7 @@ const VetAppointments = () => {
 
   return (
     <div className="container-fluid p-0 d-flex">
-              <VetSidebar />
+              <VetLayout />
     <div className="container mt-4">
       <div className="card shadow-sm rounded-4">
         <div className="card-body">

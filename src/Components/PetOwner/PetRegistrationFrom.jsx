@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './PetRegistrationForm.css';
+import Sidebar from "./Sidebar";
 
 const PetRegistrationForm = () => {
   const location = useLocation();
@@ -54,10 +55,12 @@ const PetRegistrationForm = () => {
   };
 
   return (
+    <div className="container-fluid p-0 d-flex">
+    <Sidebar />
     <div className="container py-5">
       <div className="card p-4 shadow-sm">
         <h2 className="text-center mb-3">Pet Registration</h2>
-        <h4>Pet Registration Form</h4>
+      
         <p className="text-muted">Register your pet by filling out the information below.</p>
         <form onSubmit={handleSubmit}>
           <h5 className="mt-4">Pet Information</h5>
@@ -176,9 +179,10 @@ const PetRegistrationForm = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-success w-100">Register Pet</button>
+          <button type="submit" className="btn btn-dark w-100">Register Pet</button>
         </form>
       </div>
+    </div>
     </div>
   );
 };

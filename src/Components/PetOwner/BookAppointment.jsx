@@ -113,16 +113,16 @@ const BookAppointment = () => {
     }, 2000);
   };
 
-  if (!vet) {
-    return (
-      <div className="container-fluid p-0 d-flex">
-        <Sidebar />
-        <div className="container mt-5">
-          <h4>Veterinarian not found.</h4>
-        </div>
-      </div>
-    );
-  }
+  // if (!vet) {
+  //   return (
+  //     <div className="container-fluid p-0 d-flex">
+  //       <Sidebar />
+  //       <div className="container mt-5">
+  //         <h4>Veterinarian not found.</h4>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="container-fluid p-0 d-flex">

@@ -8,7 +8,7 @@ import {
   CalendarCheckFill,
   Scissors,
   PeopleFill,
-  CreditCardFill,
+  BellFill,
   ChatDotsFill,
   TelephoneFill,
   GearFill,
@@ -18,8 +18,9 @@ import { FaSyringe , FaPaw} from 'react-icons/fa';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Dashboard.css";
 
+
 const Sidebar = () => (
-  <div className="sidebar d-flex flex-column p-2" style={{ height: "100vh", overflowY: "auto" }}>
+  <div className="sidebar p-2" style={{ height: "100vh" ,width: '250px', overflowY: "auto" }}>
     <h5 className="mb-2">
       <FaPaw className="me-2" />
       PetCare
@@ -75,10 +76,10 @@ const Sidebar = () => (
         Veterinarians
       </NavLink>
 
-      <a href="#" className="nav-link">
-        <CreditCardFill className="me-2" />
-        Payments
-      </a>
+      <NavLink to="/notifications" className="nav-link">
+  <BellFill className="me-2" />
+  Notifications
+</NavLink>
 
       <div className="mt-3 mb-2 fw-bold">Support</div>
 
@@ -87,10 +88,10 @@ const Sidebar = () => (
         Chat
       </NavLink>
 
-      <a href="#" className="nav-link ">
+      <NavLink to="/emergency" className="nav-link ">
         <TelephoneFill className="me-2" />
         Emergency
-      </a>
+      </NavLink>
 
       <a href="#" className="nav-link">
         <GearFill className="me-2" />

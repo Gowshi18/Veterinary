@@ -8,8 +8,8 @@
   }
   
   .card-header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #c2f3fa;
+    color: rgb(19, 18, 18);
     font-size: 1.5rem;
     font-weight: bold;
     padding: 20px;
@@ -57,7 +57,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #141414;
   }
   
   .btn-secondary {
