@@ -5,7 +5,7 @@ import './Header.css';
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg shadow-sm fixed-top bg-white">
-      <div className="container">
+      <div className="container-fluid">
         <a className="navbar-brand fw-bold" href="#">
           <i className="bi bi-heart-pulse-fill text-success me-2"></i>
           PetCare

@@ -9,7 +9,7 @@
 /* Card styles */
 .card {
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(165, 164, 164, 0.1);
   background-color: #ffffff;
 }
 
@@ -21,7 +21,7 @@
 
 .card h4 {
   font-size: 1.5rem;
-  color: #333;
+  color: #616161;
 }
 
 .card p {

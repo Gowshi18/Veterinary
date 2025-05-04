@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
-import './Profile.css';
+import "./Profile.css";
 import Sidebar from "./Sidebar";
 
-const Profile = () => {
+const EditProfile = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: "Adam Johnson",
-    email: "adam.johnson@example.com",
-    phone: "+1 234 567 8901",
-    alternate: "+1 987 654 3210",
-    address: "123 Pet Lane, HappyTown, PA",
-    gender: "Male",
-    dob: "1985-01-15",
-    emergency: "Jane Johnson (+1 555 111 2222)",
+    name: " ",
+    email: " ",
+    phone: " ",
+    alternate: " ",
+    address: " ",
+    gender: " ",
+    dob: "",
+    emergency: " ",
     pets: 2,
   });
 
@@ -24,11 +24,38 @@ const Profile = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Profile Updated:", formData);
-    alert("Profile saved successfully!");
-    navigate("/profile", { state: { updatedProfile: formData } });
+    try {
+      const response = await fetch("http://localhost:8080/api/profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save profile");
+      }
+
+      // Store name and email in localStorage
+      localStorage.setItem("name", formData.name);
+      localStorage.setItem("email", formData.email);
+      // localStorage.setItem("address", formData.address);
+      // localStorage.setItem("phone", formData.phone);
+      // localStorage.setItem("alternate", formData.alternate);
+      // localStorage.setItem("gender", formData.gender);
+      // localStorage.setItem("dob", formData.dob);
+      // localStorage.setItem("emergency", formData.emergency);
+
+
+      alert("Profile saved successfully!");
+      navigate("/profile");
+    } catch (err) {
+      console.error("Error saving profile:", err);
+      alert("Something went wrong while saving profile.");
+    }
   };
 
   const handleAddPet = () => {
@@ -41,7 +68,7 @@ const Profile = () => {
         <Sidebar />
       </div>
       <div className="col-10 p-4 bg-white d-flex justify-content-center" style={{ minHeight: "100vh" }}>
-        <div className="card mb-4 justify-content-center" style={{ width:"600px",}}>
+        <div className="card mb-4 justify-content-center" style={{ width: "600px" }}>
           <div className="card-header">
             <strong>Edit Pet Owner Profile</strong>
           </div>
@@ -184,4 +211,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default EditProfile;
