@@ -81,7 +81,7 @@ const BookAppointment = () => {
   const [bookingSuccess, setBookingSuccess] = useState(false);
 
   const handleChange = (e) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -95,50 +95,49 @@ const BookAppointment = () => {
       petType: formData.petType,
       date: formData.date,
       time: formData.time,
-      doctor: vet.name,
-      clinicName: vet.clinicName,
-      specialization: vet.specialization,
-      serviceType: "Veterinarian", // Important! For categorization
+      doctor: vet?.name || "Unknown",
+      clinicName: vet?.clinicName || "Unknown",
+      specialization: vet?.specialization || "Unknown",
+      serviceType: "Veterinarian",
     };
 
-    const existingAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    const existingAppointments =
+      JSON.parse(localStorage.getItem("appointments")) || [];
+
     existingAppointments.push(appointment);
     localStorage.setItem("appointments", JSON.stringify(existingAppointments));
 
     setBookingSuccess(true);
 
-    // After a small delay, navigate to appointments page
     setTimeout(() => {
       navigate("/appointments");
     }, 2000);
   };
 
-  // if (!vet) {
-  //   return (
-  //     <div className="container-fluid p-0 d-flex">
-  //       <Sidebar />
-  //       <div className="container mt-5">
-  //         <h4>Veterinarian not found.</h4>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="container-fluid p-0 d-flex">
       <Sidebar />
-      <div className="container mt-5">
-        <h2 className="mb-4">Book Appointment with {vet.name}</h2>
+      <div className="container mt-5" style={{ marginLeft: "260px", maxWidth: "700px" }}>
+        <h2 className="mb-4">Book Appointment</h2>
 
         {bookingSuccess ? (
           <div className="alert alert-success">
             Appointment booked successfully! Redirecting to appointments page...
           </div>
         ) : (
-          <div className="card shadow-sm p-4">
-            <p><strong>Specialization:</strong> {vet.specialization}</p>
-            <p><strong>Clinic:</strong> {vet.clinicName}</p>
+          <div className="card shadow p-4">
+            <h5 className="mb-3">Veterinarian Details</h5>
+            <div className="mb-2">
+              <strong>Name:</strong> {vet?.name || "N/A"}
+            </div>
+            <div className="mb-2">
+              <strong>Specialization:</strong> {vet?.specialization || "N/A"}
+            </div>
+            <div className="mb-4">
+              <strong>Clinic:</strong> {vet?.clinicName || "N/A"}
+            </div>
 
+            <h5 className="mb-3">Pet Appointment Form</h5>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Pet Name</label>
@@ -149,6 +148,7 @@ const BookAppointment = () => {
                   required
                   value={formData.petName}
                   onChange={handleChange}
+                  placeholder="Enter your pet's name"
                 />
               </div>
 
@@ -160,16 +160,16 @@ const BookAppointment = () => {
                   value={formData.petType}
                   onChange={handleChange}
                 >
-                  <option>Dog</option>
-                  <option>Cat</option>
-                  <option>Bird</option>
-                  <option>Rabbit</option>
-                  <option>Other</option>
+                  <option value="Dog">Dog</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Bird">Bird</option>
+                  <option value="Rabbit">Rabbit</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Date</label>
+                <label className="form-label">Appointment Date</label>
                 <input
                   type="date"
                   name="date"
@@ -180,8 +180,8 @@ const BookAppointment = () => {
                 />
               </div>
 
-              <div className="mb-3">
-                <label className="form-label">Time</label>
+              <div className="mb-4">
+                <label className="form-label">Appointment Time</label>
                 <input
                   type="time"
                   name="time"
@@ -192,7 +192,9 @@ const BookAppointment = () => {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary">Confirm Appointment</button>
+              <button type="submit" className="btn btn-primary w-100">
+                Confirm Appointment
+              </button>
             </form>
           </div>
         )}

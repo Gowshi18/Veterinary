@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import './Veterinarian.css';
 import VeterinarianAvailability from "./VeterinarianAvailability";
@@ -108,6 +109,7 @@ const veterinarians = [
 
 const Veterinarians = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const filteredVets = veterinarians.filter((vet) =>
     (vet.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -119,12 +121,13 @@ const Veterinarians = () => {
   const handleBookAppointment = (vet) => {
     alert(`Booking appointment with ${vet.name} at ${vet.clinicName}`);
     // In future: navigate to appointment booking page with vet details
+     navigate('/book-appointment');
   };
 
   return (
     <div className="container-fluid p-0 d-flex">
       <Sidebar />
-      <div className="container-fluid mt-6 ">
+      <div className="container mt-6 ">
         <h2 className="mb-4 text-center">Our Veterinarians</h2>
 
         {/* Search Bar */}

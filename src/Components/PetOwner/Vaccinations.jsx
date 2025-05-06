@@ -431,7 +431,7 @@ const Vaccinations = () => {
   return (
     <div className="container-fluid p-0 d-flex">
           <Sidebar />
-    <div className="container-fluid mt-5 ">
+    <div className="container mt-5 ">
       <h2 className="text-center fw-bold">Pet Vaccination Services</h2>
       <p className="text-center text-muted">Select a pet type to view relevant vaccinations</p>
 

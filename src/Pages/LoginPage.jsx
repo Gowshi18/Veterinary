@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
   const [userType, setUserType] = useState('petOwner');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,8 +19,23 @@ function LoginPage() {
         password,
       });
 
-      alert(`Login successful as ${response.data.userType || userType}`);
-      // Save token/user if needed, then redirect
+      const user = response.data;
+      const role = user.role || user.userType || user.user?.role; // Adjust according to backend
+
+      alert(`Login successful as ${role}`);
+
+      // Store user in localStorage if needed
+      localStorage.setItem('user', JSON.stringify(user));
+
+      // Navigate based on role
+      if (role === 'petOwner') {
+        navigate('/dashboard');
+      } else if (role === 'vet') {
+        navigate('/vet-dashboard');
+      } else {
+        alert('Unknown role. Cannot navigate.');
+      }
+
     } catch (error) {
       console.error('Login error:', error);
       alert('Login failed. Please check credentials.');
@@ -46,14 +63,14 @@ function LoginPage() {
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className= "w-100">
+        <form onSubmit={handleSubmit} className="w-100">
           <div className="mb-3 text-start w-100">
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="email"
               id="email"
               className="form-control"
-              placeholder="john@example.com"
+              placeholder="enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required

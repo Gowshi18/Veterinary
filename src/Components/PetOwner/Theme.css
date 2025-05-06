@@ -16,8 +16,11 @@ body , html{
     border-radius: 18px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     border: none;
+    max-width: 800px;
   }
-  
+  .container{
+    max-width: 900px;
+  }
   
   /* ====== Containers ====== */
   .custom-container {
